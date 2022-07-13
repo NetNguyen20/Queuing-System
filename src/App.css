@@ -5,6 +5,18 @@
     font-style: normal;
   }
 
+  .Capso {
+    position: absolute;
+    width: 790px;
+    height: 128px;
+    left: 224px;
+    top: 156px;
+
+    border-radius: 12px;
+  }
+
+
+
   .form-group span {
     position: absolute;
     top: 435px;
@@ -42,18 +54,18 @@
   }
 
   /* .list-menu{
-    
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
+          
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 0px;
 
-    position: absolute;
-    width: 10%;
-    height: 30%;
-    left: 0%;
-    top: 3%;
-  } */
+          position: absolute;
+          width: 10%;
+          height: 30%;
+          left: 0%;
+          top: 3%;
+        } */
 
   .list-link img {
     position: relative;
@@ -198,6 +210,7 @@
     height: 136px;
     left: 265px;
     top: 58px;
+    
   }
 
   .form-group {
@@ -878,41 +891,40 @@
     flex-grow: 0;
   }
 
-  .styled-table{
-    border-collapse:collapse;
+  .styled-table {
+    border-collapse: collapse;
     font-size: 0.9em;
     font-family: sans-serif;
     position: absolute;
-width: 1112px;
-height: 490px;
-left: 224px;
-top: 244px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.15);
-}
+    width: 1112px;
+    height: 490px;
+    left: 224px;
+    top: 244px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
 
-.styled-table thead tr {
+  .styled-table thead tr {
     background-color: #FF9138;
-    color:#fff;
+    color: #fff;
     text-align: left;
-}
+  }
 
-.styled-table th,
-.styled-table td{
+  .styled-table th,
+  .styled-table td {
     padding: 12px 15px;
-}
+  }
 
-.styled-table tbody tr {
+  .styled-table tbody tr {
     border-bottom: 1px solid #FFE3CD;
-}
+  }
 
-.styled-table tbody tr:nth-of-type(even)
-{
+  .styled-table tbody tr:nth-of-type(even) {
     background-color: white;
-}
+  }
 
-.styled-table tbody tr:last-of-type{
+  .styled-table tbody tr:last-of-type {
     border-bottom: 2px solid #fff;
-}
+  }
 
 
 
@@ -1092,9 +1104,9 @@ top: 244px;
     top: 342px;
   }
 
-  .vaitrond .dropdown-btn{
+  .vaitrond .dropdown-btn {
     width: 350px;
-    padding: 6px 10px;
+    padding: 15px 10px;
     background: #fff;
     box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
     font-weight: bold;
@@ -1105,7 +1117,7 @@ top: 244px;
     justify-content: space-between;
   }
 
-  .vaitrond .dropdown-content{
+  .vaitrond .dropdown-content {
     position: absolute;
     width: 350px;
     top: 75px;
@@ -1117,12 +1129,12 @@ top: 244px;
 
   }
 
-  .vaitrond .dropdown-item{
+  .vaitrond .dropdown-item {
     padding: 10px;
     cursor: pointer;
   }
-  
-  .vaitrond .dropdown-item :hover{
+
+  .vaitrond .dropdown-item :hover {
     background: white;
   }
 
@@ -1141,9 +1153,9 @@ top: 244px;
     top: 342px;
   }
 
-  .tinhtrangnd .dropdown-btn{
+  .tinhtrangnd .dropdown-btn {
     width: 350px;
-    padding: 6px 10px;
+    padding: 15px 10px;
     background: #fff;
     box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
     font-weight: bold;
@@ -1154,7 +1166,7 @@ top: 244px;
     justify-content: space-between;
   }
 
-  .tinhtrangnd .dropdown-content{
+  .tinhtrangnd .dropdown-content {
     position: absolute;
     width: 350px;
     top: 75px;
@@ -1166,12 +1178,12 @@ top: 244px;
 
   }
 
-  .tinhtrangnd .dropdown-item{
+  .tinhtrangnd .dropdown-item {
     padding: 10px;
     cursor: pointer;
   }
-  
-  .tinhtrangnd .dropdown-item :hover{
+
+  .tinhtrangnd .dropdown-item :hover {
     background: white;
   }
 
@@ -1258,4 +1270,672 @@ top: 244px;
     flex-grow: 0;
   }
 
- 
+  .thongtin h5 {
+    position: absolute;
+    left: 250px;
+    top: 120px;
+    font-weight: 700;
+    font-family: 'Nunito';
+    font-style: normal;
+    color: #FF7506;
+  }
+
+  .searchvaitro {
+    position: absolute;
+
+    left: 250px;
+    top: 160px;
+  }
+
+  .search {
+    position: absolute;
+
+    left: 1140px;
+    top: 160px;
+  }
+
+  .information img {
+    position: absolute;
+    left: 1250px;
+    top: 5px
+  }
+
+  .sothutu {
+    position: absolute;
+    width: 790px;
+    height: 128px;
+    left: 224px;
+    top: 156px;
+
+    border-radius: 12px;
+  }
+
+  .sothutudacap {
+    position: absolute;
+    width: 186px;
+    height: 120px;
+    left: 4px;
+    top: 4px;
+
+    background: #fff;
+
+    box-shadow: 2px 2px 15px rgba(70, 64, 67, 0.1);
+    border-radius: 12px;
+  }
+
+  .sothutudacap img {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: 12px;
+    top: 8px;
+  }
+
+  .sothutudacap p {
+    position: absolute;
+    width: 60px;
+    height: 36px;
+    left: 72.02px;
+    top: 14px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+
+    color: #535261;
+  }
+
+  .sothutudacap h2 {
+    position: absolute;
+    width: 108px;
+    height: 45px;
+    left: 12px;
+    top: 68px;
+
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+
+    color: #535261;
+  }
+
+  .sophantram1 {
+    position: absolute;
+    width: 48px;
+    height: 14.98px;
+    left: 130.3px;
+    top: 85.53px;
+
+    background: rgba(255, 149, 1, 0.15);
+    border-radius: 7.18115px;
+  }
+
+  .sophantram1 img {
+    width: 5.25px;
+    height: 6px;
+    left: 8.63px;
+    top: 4px;
+  }
+
+  .sophantram1 p {
+    position: absolute;
+    width: 29px;
+    height: 12px;
+    left: 15px;
+    top: 2px;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 12px;
+    color: #FF9138;
+  }
+
+  .sothutudasudung {
+    position: absolute;
+    width: 186px;
+    height: 120px;
+    left: 203px;
+    top: 4px;
+
+    background: #FFFFFF;
+    border-radius: 10px;
+
+    filter: drop-shadow(2px 2px 15px rgba(70, 64, 67, 0.1));
+    border-radius: 12px;
+  }
+
+  .sothutudasudung img {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: 11.75px;
+    top: 8px;
+
+  }
+
+  .sothutudasudung p {
+    position: absolute;
+    width: 72px;
+    height: 36px;
+    left: 72.02px;
+    top: 14px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+
+    color: #535261;
+  }
+
+  .sothutudasudung h2 {
+    position: absolute;
+    width: 108px;
+    height: 45px;
+    left: 12px;
+    top: 68px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+
+    color: #535261;
+  }
+
+  .sophantram2 {
+    position: absolute;
+    width: 48px;
+    height: 14.98px;
+    left: 130.3px;
+    top: 85.53px;
+
+    background: rgba(231, 63, 63, 0.15);
+    border-radius: 7.18115px;
+  }
+
+  .sophantram2 img {
+    width: 5.25px;
+    height: 6px;
+    top: 3px;
+    left: 8.63px;
+  }
+
+  .sophantram2 p {
+    position: absolute;
+    width: 29px;
+    height: 12px;
+    left: 15px;
+    top: 2px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 12px;
+
+    color: #E73F3F;
+  }
+
+  .sothutudangcho {
+    position: absolute;
+    width: 186px;
+    height: 120px;
+    left: 402px;
+    top: 4px;
+
+    background: #FFFFFF;
+    border-radius: 10px;
+
+    filter: drop-shadow(2px 2px 15px rgba(70, 64, 67, 0.1));
+    border-radius: 12px;
+  }
+
+  .sothutudangcho img {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: 12.25px;
+    top: 8px;
+  }
+
+  .sothutudangcho p {
+    position: absolute;
+    width: 60px;
+    height: 36px;
+    left: 72.02px;
+    top: 14px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+
+    color: #535261;
+  }
+
+  .sothutudangcho h2 {
+    position: absolute;
+    width: 108px;
+    height: 45px;
+    left: 12px;
+    top: 68px;
+
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+
+    text-align: center;
+
+    color: #535261;
+  }
+
+  .sophantram3 {
+    position: absolute;
+    width: 48px;
+    height: 14.98px;
+    left: 130.3px;
+    top: 85.53px;
+
+    background: rgba(255, 149, 1, 0.15);
+    border-radius: 7.18115px;
+  }
+
+  .sophantram3 img {
+    width: 5.25px;
+    height: 6px;
+    top: 4px;
+    left: 8.63px;
+  }
+
+  .sophantram3 p {
+    position: absolute;
+    width: 29px;
+    height: 12px;
+    left: 15px;
+    top: 2px;
+
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 12px;
+
+    color: #FF9138;
+  }
+
+  .sothutuboqua {
+    position: absolute;
+    width: 186px;
+    height: 120px;
+    left: 600px;
+    top: 4px;
+
+    filter: drop-shadow(2px 2px 15px rgba(70, 64, 67, 0.1));
+    border-radius: 12px;
+
+    background: #FFFFFF;
+  }
+
+  .sothutuboqua img {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: 12.5px;
+    top: 8px;
+
+  }
+
+  .sothutuboqua p {
+    position: absolute;
+    width: 65px;
+    height: 36px;
+    left: 72.02px;
+    top: 14px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+
+    color: #535261;
+  }
+
+  .sothutuboqua h2 {
+    position: absolute;
+    width: 108px;
+    height: 45px;
+    left: 12px;
+    top: 68px;
+
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+
+    color: #535261;
+  }
+
+  .sophantram4 {
+    position: absolute;
+    width: 48px;
+    height: 14.98px;
+    left: 130.3px;
+    top: 85.53px;
+
+    background: rgba(231, 63, 63, 0.15);
+    border-radius: 7.18115px;
+  }
+
+  .sophantram4 img {
+    position: absolute;
+    width: 5.25px;
+    height: 6px;
+    top: 4px;
+    left: 8.63px;
+  }
+
+  .sophantram4 p {
+    position: absolute;
+    width: 29px;
+    height: 12px;
+    left: 15px;
+    top: 2px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 12px;
+
+    color: #E73F3F;
+  }
+
+  .tongquan h1 {
+    position: absolute;
+    width: 118px;
+    height: 36px;
+    left: 1100px;
+    top: 104px;
+
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+
+    color: #FF7506;
+  }
+
+  .tongquanthietbi {
+    position: absolute;
+    width: 353px;
+    height: 83px;
+    left: 1100px;
+    top: 156px;
+
+    background: #FFFFFF;
+    box-shadow: 2px 2px 15px rgba(70, 64, 67, 0.1);
+    border-radius: 12px;
+  }
+
+  .tongquanthietbi img {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 16px;
+    top: 11px;
+  }
+
+  .tongquanthietbi h2 {
+    position: absolute;
+    width: 64px;
+    height: 36px;
+    left: 88px;
+    top: 14px;
+
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 36px;
+
+    color: #535261;
+  }
+
+  .tongquanthietbi p {
+    position: absolute;
+    width: 49px;
+    height: 21px;
+    left: 106px;
+    top: 47px;
+
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+
+    color: #FF7506;
+  }
+
+  .tongquanthietbi .hd {
+    position: absolute;
+    width: 87px;
+    height: 21px;
+    left: 200px;
+    top: 18px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 21px;
+
+    color: #7E7D88;
+  }
+
+  .tongquanthietbi .nhd {
+    position: absolute;
+    width: 95px;
+    height: 21px;
+    left: 200px;
+    top: 44px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 21px;
+
+    color: #7E7D88;
+  }
+
+
+  .tongquandichvu {
+    position: absolute;
+    width: 353px;
+    height: 83px;
+    left: 1100px;
+    top: 251px;
+
+    background: #FFFFFF;
+    box-shadow: 2px 2px 15px rgba(70, 64, 67, 0.1);
+    border-radius: 12px;
+  }
+
+  .tongquandichvu img {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 16px;
+    top: 11px;
+
+  }
+
+  .tongquandichvu p {
+    position: absolute;
+    width: 48px;
+    height: 21px;
+    left: 106px;
+    top: 47px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+
+    color: #4277FF;
+  }
+
+  .tongquandichvu .hd1 {
+    position: absolute;
+    width: 87px;
+    height: 21px;
+    left: 200px;
+    top: 18px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 21px;
+
+    color: #7E7D88;
+  }
+
+  .tongquandichvu .nhd1 {
+    position: absolute;
+    width: 95px;
+    height: 21px;
+    left: 200px;
+    top: 44px;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 21px;
+
+    color: #7E7D88;
+
+  }
+
+  .tongquandichvu h2 {
+    position: absolute;
+    width: 44px;
+    height: 36px;
+    left: 88px;
+    top: 14px;
+
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 36px;
+    color: #535261;
+  }
+
+  .tongquancapso {
+    position: absolute;
+    width: 353px;
+    height: 83px;
+    left: 1100px;
+    top: 346px;
+
+    background: #FFFFFF;
+    box-shadow: 2px 2px 15px rgba(70, 64, 67, 0.1);
+    border-radius: 12px;
+  }
+
+  .tongquancapso img {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 16px;
+    top: 11px;
+  }
+
+  .tongquancapso p {
+    position: absolute;
+    width: 44px;
+    height: 21px;
+    left: 106px;
+    top: 47px;
+
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+
+    color: #35C75A;
+  }
+
+  .tongquancapso .dsu {
+    position: absolute;
+    width: 62px;
+    height: 21px;
+    left: 200px;
+    top: 10px;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 21px;
+
+    color: #7E7D88;
+  }
+
+  .tongquancapso .dc {
+    position: absolute;
+    width: 52px;
+    height: 21px;
+    left: 200px;
+    top: 31px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 21px;
+
+    color: #7E7D88;
+
+  }
+
+  .tongquancapso .bq {
+    position: absolute;
+    width: 38px;
+    height: 21px;
+    left: 200px;
+    top: 52px;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 21px;
+
+    color: #7E7D88;
+  }
+
+  .tongquancapso h2 {
+    position: absolute;
+    width: 64px;
+    height: 36px;
+    left: 88px;
+    top: 14px;
+
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 36px;
+
+    color: #535261;
+  }
+
+  .calendar{
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 16px 10px;
+
+position: absolute;
+width: 353px;
+height: 336px;
+left: 1100px;
+top: 445px;
+
+color: #FF7506;
+
+background: #FFFFFF;
+box-shadow: 2px 2px 15px rgba(70, 64, 67, 0.1);
+border-radius: 12px;
+  }
+
+  .chart{
+    position: absolute;
+left: 200px;
+top: 350px;
+  }

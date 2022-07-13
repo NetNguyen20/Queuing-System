@@ -1,16 +1,14 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { NavLink, useNavigate } from "react-router-dom";
 import { auth, db } from "../firebase";
 import { addDoc, collection, serverTimestamp, Timestamp } from "firebase/firestore"
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import Nvabar from "../component/nvabar";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import 'react-css-dropdown/dist/index.css'
 import caret from "../image/caret.png"
 
 
-const Themnguoidung = () => {
+const Themnguoidung = (props:any) => {
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -107,9 +105,10 @@ const Themnguoidung = () => {
             </div>
             <div className="tinhtrangnd">
                 <p>Tình trạng</p>
-                <div className="dropdown-btn" onClick={(e) => setIsActive1(!isActive1)}>
+                <div className="dropdown-btn" onClick={(e) => setIsActive1(!isActive1)} >
                     {tinhtrang}
                     <img src={caret} />
+                          
 
                 </div>
                 {isActive1 && (
@@ -126,8 +125,8 @@ const Themnguoidung = () => {
         </div>
         <div className="nutchon">
             
-            <button className="huybo">
-                <NavLink to="/Page-nguoidung"></NavLink>
+            <button className="huybo" onClick={props.onClose}>
+                {/* <NavLink to="/Page-nguoidung"></NavLink> */}
                 <p>Hủy bỏ</p>
             </button>
             <button onClick={themtaikhoan} className="them">

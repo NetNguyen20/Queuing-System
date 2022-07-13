@@ -8,7 +8,7 @@ import {getAuth, signInWithEmailAndPassword} from "firebase/auth"
 import { useAuthState } from "react-firebase-hooks/auth";
 
 
-import TrangChu from "../component/TrangChu"
+import TrangChu from "../component/Trangchu"
 import {NavLink, useNavigate} from "react-router-dom"
 
   const Login = () => {

@@ -36,6 +36,20 @@ const Quanlytaikhoan = () => {
     
     return (
         <div style={{ top: "0px"}}>
+             <div className="tieude">
+                <p>Cài đặt hệ thống  -  Quản lý người dùng</p>
+            </div>
+            <div className="thongtin">
+                <h5>Danh sách tài khoản</h5>
+            </div>
+            <div className="searchvaitro">
+                <p>Tên vai trò</p>
+                <input type="text" placeholder="Tất cả" />
+            </div>   
+            <div className="search">
+                <p>Từ khóa</p>
+                <input type="text" placeholder="Nhập từ khóa" />
+            </div>          
             <Nvabar/>
             <table className="styled-table">
                 <thead>
@@ -61,7 +75,7 @@ const Quanlytaikhoan = () => {
                                         <td>{users[id].email}</td>
                                         <td>{users[id].vaitro}</td>
                                         <td>{users[id].tinhtrang}</td>
-                                        <td><NavLink to={"/capnhat"}>Cập nhậ</NavLink>t</td>
+                                        <td><NavLink to={"/capnhat"}>Cập nhật</NavLink></td>
                                     </tr>
                             );
                         }
@@ -69,6 +83,11 @@ const Quanlytaikhoan = () => {
                     }
                 </tbody>
             </table>
+
+            <NavLink className="themtaikhoan" to="/Page-nguoidung">
+                <img src={Add} />
+                <label style={{width: "35px" }}>Thêm người dùng</label>
+            </NavLink>
 
     </div>
         
