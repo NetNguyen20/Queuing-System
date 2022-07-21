@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
-import { auth, db } from "../firebase";
+import { auth, db } from "../../firebase";
 import { addDoc, collection } from "firebase/firestore"
 import { createUserWithEmailAndPassword } from "firebase/auth";
 
@@ -50,7 +50,7 @@ const Register = () => {
           className="register__textBox"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
-          placeholder="User Name"
+          placeholder="Email"
         />
         <input
           type="text"
@@ -67,7 +67,7 @@ const Register = () => {
           placeholder="Full Name"
         />
         <input
-          type="email"
+          type="text"
           className="register__textBox"
           value={email}
           onChange={(e) => setEmail(e.target.value)}

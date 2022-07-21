@@ -8,6 +8,7 @@ import Caidat from "../image/Caidat.png"
 import Dangxuat from "../image/Dangxuat.png"
 import List from "../image/List.png"
 import User from "../image/User.png"
+import Bell from "../image/bell.png"
 
 import { auth, db } from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -53,10 +54,15 @@ const Nvabar = () => {
         signOut(auth);
     };
     return (<div>
+        
         <div className="information">
-            <img src={User} />
+        <img src={Bell} style={{top: "10px", left:"1210px"}}/>
+
+            <NavLink to="/Page-home">
+                <img src={User} />
+            </NavLink>
             <div className="ten">
-                <p>Xin chào<br />{username}</p>
+                <p style={{width:"150px"}}>Xin chào<br />{name}</p>
             </div>
 
         </div>
@@ -72,7 +78,7 @@ const Nvabar = () => {
                     </NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink className="list-link Thiet-bi" to="/Page-themthietbi">
+                    <NavLink className="list-link Thiet-bi" to="/Page-thietbi">
                         <img className="i-element" src={Thietbi} />
                         Thiết bị
                     </NavLink>
@@ -105,9 +111,9 @@ const Nvabar = () => {
 
                         </a>
                         <ul>
-                            <li><a href="/Page-quanly">Quản lý tài khoản</a></li>
-                            <li><a href="#">Quản lý vai trò</a></li>
-                            <li><a href="#">Nhật ký người dùng</a></li>
+                            <li><a href="Page-quanly">Quản lý tài khoản</a></li>
+                            <li><a href="Page-vaitro">Quản lý vai trò</a></li>
+                            <li><a href="Page-nhatkyhoatdong">Nhật ký người dùng</a></li>
                         </ul>
                     </li>
                 </ul>
