@@ -21,7 +21,7 @@ const Editthietbi = () => {
             return
         }
         const docRef = doc(db, 'thietbi', id)
-        updateDoc(docRef, { mathietbi, loaithietbi, tenthietbi, tendangnhap, diachiip, matkhau, dichvu }).then(response=>{
+        updateDoc(docRef, {mathietbi, loaithietbi, tenthietbi, tendangnhap, diachiip, matkhau, dichvu }).then(response=>{
             console.log(response)
 
         }).catch(error=>console.log(error.message))

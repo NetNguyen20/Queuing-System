@@ -55,11 +55,11 @@ const TrangChu = () => {
                 </div>
                 <div className="tennguoidung">
                     <p>Tên người dùng</p><br />
-                    <form style={{color: "#535261", opacity:"0.5"}} action="">{name}</form>
+                    <form style={{color: "#535261", opacity:"0.5"}} action="">{username}</form>
                 </div>
                 <li className="tennguoidung1">
                     <p>Tên đăng nhập</p>
-                    <form style={{color: "#535261", opacity:"0.5"}}action="">{username}</form>
+                    <form style={{color: "#535261", opacity:"0.5"}}action="">{name}</form>
                 </li>
                 <li className="tennguoidung2">
                     <p>Số điện thoại</p>

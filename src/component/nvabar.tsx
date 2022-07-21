@@ -62,7 +62,7 @@ const Nvabar = () => {
                 <img src={User} />
             </NavLink>
             <div className="ten">
-                <p style={{width:"150px"}}>Xin chào<br />{name}</p>
+                <p style={{width:"150px"}}>Xin chào<br />{username}</p>
             </div>
 
         </div>
