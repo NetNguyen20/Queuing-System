@@ -1,7 +1,6 @@
 import { auth, db } from "../firebase";
-import { AuthContext } from "../context/AuthContext";
 import React, { useContext, useEffect, useRef, useState } from "react";
-import logo from "../image/logo.png"
+import anhdaidien from "../image/anhdaidien.png"
 import Nvabar from "../component/nvabar"
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
@@ -45,38 +44,38 @@ const TrangChu = () => {
         <div>
             <Nvabar />
             <div className="tieude">
-                <p>Thông tin cá nhân</p>
+                <p style={{width: "200px", color:"#FF9138"}}>Thông tin cá nhân</p>
             </div>
         </div>
         <div className="informationUser">
             <ul className="detail">
-                <img className="anhdaidien" src={logo} />
+                <img src={anhdaidien} />
                 <div className="hovaten">
-                    <p>{name}</p>
+                    <p>{username}</p>
                 </div>
                 <div className="tennguoidung">
                     <p>Tên người dùng</p><br />
-                    <form action="">{name}</form>
+                    <form style={{color: "#535261", opacity:"0.5"}} action="">{name}</form>
                 </div>
                 <li className="tennguoidung1">
                     <p>Tên đăng nhập</p>
-                    <form action="">{username}</form>
+                    <form style={{color: "#535261", opacity:"0.5"}}action="">{username}</form>
                 </li>
                 <li className="tennguoidung2">
                     <p>Số điện thoại</p>
-                    <form action="">{phone}</form>
+                    <form style={{color: "#535261", opacity:"0.5"}} action="">{phone}</form>
                 </li>
                 <li className="tennguoidung3">
                     <p>Mật khẩu</p>
-                    <form action="">{password}</form>
+                    <form style={{color: "#535261", opacity:"0.5"}} action="">{password}</form>
                 </li>
                 <li className="tennguoidung4">
                     <p>Email</p>
-                    <form action="">{email}</form>
+                    <form style={{color: "#535261", opacity:"0.5"}} action="">{email}</form>
                 </li>
                 <li className="tennguoidung5">
                     <p>Vai trò</p>
-                    <form action="">{vaitro}</form>
+                    <form style={{color: "#535261", opacity:"0.5"}} action="">{vaitro}</form>
                 </li>
             </ul>
         </div>

@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { NavLink, useNavigate } from "react-router-dom";
-import { auth, db } from "../firebase";
+import { auth, db } from "../../firebase";
 import { addDoc, collection, serverTimestamp, Timestamp } from "firebase/firestore"
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import Nvabar from "../component/nvabar";
-import caret from "../image/caret.png"
+import Nvabar from "../nvabar";
+import Select from 'react-select'
+import to from "../../image/to.png"
+
 
 
 const Themnguoidung = (props:any) => {
@@ -17,10 +19,32 @@ const Themnguoidung = (props:any) => {
     const [tinhtrang, setTinhtrang] = useState("");
     const [phone, setPhone] = useState<number | string>(0);
     const [user, loading, error] = useAuthState(auth);        
-    const [isActive, setIsActive] = useState(false);
-    const [isActive1, setIsActive1] = useState(false);
-    const options1 = ["Kế toán", "Quản lý", "Admin"];
-    const options2 = ["Tất cả", "Ngừng hoạt động", "Hoạt động"];
+    const options1 = [
+        { value: 'Kế toán', label: 'Kế toán' },
+        { value: 'Quản lý', label: 'Quản lý' },
+        { value: 'Admin', label: 'Admin' }
+    ]
+    const options2 = [
+        { value: 'Tất cả', label: 'Tất cả'},
+        { value: 'Ngừng hoạt động', label: 'Ngừng hoạt động'},
+        { value: 'Hoạt động', label: 'Hoạt động'  }
+    ]
+    
+    // const styles = {
+    //     option: (provided, state) => ({
+    //       ...provided,
+    //       fontWeight: state.isSelected ? "bold" : "normal",
+    //       color: "white",
+    //       backgroundColor: state.data.color,
+    //       fontSize: state.selectProps.myFontSize
+    //     }),
+    //     singleValue: (provided, state) => ({
+    //       ...provided,
+    //       color: state.data.color,
+    //       fontSize: state.selectProps.myFontSize
+    //     })
+    //   }
+
 
     const navigate = useNavigate();
     const createUser = async (username: string, name: string, email: string, password: string, phone: number | string, vaitro:string, tinhtrang:string) => {
@@ -53,13 +77,17 @@ const Themnguoidung = (props:any) => {
         if (loading) return;
         if (user) navigate('', { replace: true });
     }, [user, loading]);
+
     return (<div>
-        <div>
             <Nvabar />
             <div className="tieude">
-                <p>Thông tin cá nhân</p>
+                <p style={{top: "10px"}}>Cài đặt hệ thống</p>
+                <img style={{left: "382px", top: "20px"}} src={to} />
+                <p style={{left:"400px",width:"160px" ,top: "10px"}}>Quản lý tài khoản</p>
+                <img style={{left: "562px", top: "20px"}} src={to} />
+                <h5 style={{left:"580px", top: "10px"}}>Thêm tài khoản</h5>
             </div>
-        </div>
+            
         <div className="Themnguoidung">
             <h5>Thông tin tài khoản</h5>
             <div className="hotennd">
@@ -68,7 +96,7 @@ const Themnguoidung = (props:any) => {
             </div>
             <div className="tendangnhapnd">
                 <p>Tên đăng nhập</p>
-                <input onChange={(e) => setName(e.target.value)} value={name} type="text" className="form-control" placeholder="Nhập tên đăng nhập"></input>
+                <input onChange={(e) => setName(e.target.value)} value={name} type="email" className="form-control" placeholder="Nhập tên đăng nhập"></input>
             </div>
             <div className="sodienthoaind">
                 <p>Số điện thoại</p>
@@ -84,50 +112,25 @@ const Themnguoidung = (props:any) => {
             </div>
             <div className="emailnd">
                 <p>Email</p>
-                <input onChange={(e) => setEmail(e.target.value)} value={email} type="email" className="form-control" placeholder="Nhập email"></input>
+                <input onChange={(e) => setEmail(e.target.value)} value={email} type="text" className="form-control" placeholder="Nhập email"></input>
             </div>
 
             <div className="vaitrond">
                 <p>Vai trò</p>
-                <div className="dropdown-btn" onClick={(e) => setIsActive(!isActive)}>
-                    {vaitro}
-                    <img src={caret} />
-                </div>
-                {isActive && (
-                    <div className="dropdown-content">
-                        {options1.map((option) =>(
-                            <div onClick={(e) => {setVaitro(option); setIsActive(false);}} className="dropdown-item">{option}</div>
-                            )
-                        )}
-                    </div>
-                )}
-                {/* <input onChange={(e) => setVaitro(e.target.value)} value={vaitro} type="text" className="form-control" placeholder="Nhập vai trò"></input> */}
+                <Select options={options1} onChange={(e) => setVaitro(e.value)} placeholder="Chọn vai trò..."/>
+              
             </div>
             <div className="tinhtrangnd">
                 <p>Tình trạng</p>
-                <div className="dropdown-btn" onClick={(e) => setIsActive1(!isActive1)} >
-                    {tinhtrang}
-                    <img src={caret} />
-                          
-
-                </div>
-                {isActive1 && (
-                    <div className="dropdown-content">
-                        {options2.map((option1) =>(
-                            <div onClick={(e) => {setTinhtrang(option1); setIsActive1(false);}} className="dropdown-item">{option1}</div>
-                            )
-                        )}
-                    </div>
-                )}
-                {/* <input onChange={(e) => setTinhtrang(e.target.value)} value={tinhtrang} type="text" className="form-control" placeholder="Nhập tình trạng"></input> */}
+                <Select options={options2} onChange={(e) => setTinhtrang(e.value)} placeholder="Chọn tình trạng..."/>
             </div>
 
         </div>
         <div className="nutchon">
             
-            <button className="huybo" onClick={props.onClose}>
+            <button className="huybo">
                 {/* <NavLink to="/Page-nguoidung"></NavLink> */}
-                <p>Hủy bỏ</p>
+                <NavLink style={{textDecoration:'none'}} to="/Page-quanly"><p>Hủy bỏ</p></NavLink>
             </button>
             <button onClick={themtaikhoan} className="them">
                 <p>Thêm</p>
