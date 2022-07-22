@@ -2925,3 +2925,255 @@ top: -10px;
 filter: drop-shadow(2px 2px 8px rgba(232, 239, 244, 0.8));
 border-radius: px;
 }
+
+.capsomoi{
+  position: absolute;
+width: 1192px;
+height: 604px;
+left: 224px;
+top: 164px;
+
+
+background: #FFFFFF;
+
+box-shadow: 2px 2px 8px rgba(232, 239, 244, 0.8);
+border-radius: 16px;
+}
+
+.capsomoi label{
+  position: absolute;
+width: 190px;
+height: 48px;
+left: 501px;
+top: 24px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 48px;
+
+color: #FF7506;
+
+}
+
+.capsomoi h5{
+  position: absolute;
+width: 265px;
+height: 30px;
+left: 464px;
+top: 92px;
+
+font-weight: 700;
+font-size: 20px;
+line-height: 30px;
+
+color: #535261;
+}
+
+.capsodichvu{
+  position: absolute;
+  width: 480px;
+  top: 150px;
+  left: 355px;
+}
+
+
+.popup{
+  position: relative;
+  left: 150px;
+  top: 300px;
+}
+
+.popup-box {
+  position: fixed;
+  background: #00000050;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+ 
+.box {
+  position: relative;
+width: 469px;
+height: 385px;
+left: 560px;
+top: 150px;
+background: #FFFFFF;
+border-radius: 24px;
+}
+ 
+.close-icon {
+  position: absolute;
+
+  content: 'x';
+  cursor: pointer;
+  position: fixed;
+  right: 460px;
+  top: 150px;
+  background: #ededed;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  line-height: 20px;
+  text-align: center;
+  border: 1px solid #999;
+  font-size: 20px;
+}
+
+.chart label{
+  position: absolute;
+left: 15px;
+top: -50px;
+
+font-weight: 700;
+font-size: 20px;
+line-height: 30px;
+
+color: #282739;
+
+}
+
+.chart p{
+  
+position: absolute;
+left: 15px;
+top: -15px;
+
+font-weight: 400;
+font-size: 14px;
+line-height: 21px;
+
+
+color: #A9A9B0;
+}
+
+.chart h5{
+  position: absolute;
+left: 15px;
+top: 350px;
+
+font-weight: 400;
+font-size: 12px;
+line-height: 18px;
+
+color: #535261;
+}
+
+.chart h4{
+  position: absolute;
+  left: 25px;
+  top: 370px;
+  
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  
+  color: #535261;
+}
+
+.chart h1{
+  position: absolute;
+  right: 120px;
+  top: -50px;
+  width: 70px;
+height: 24px;
+
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+
+
+color: #282739;
+
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.dashboardoption{
+  position: absolute;
+  width: 106px;
+  height: 42px;
+  right: 10px;
+  top: -55px;
+}
+
+.sothutuduoccap label{
+  position: absolute;
+  width: 279px;
+  height: 48px;
+  left: 95px;
+  top: 48px;
+
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+  color: #535261;
+}
+
+.sothutuduoccap h2{
+  position: absolute;
+width: 236px;
+height: 60px;
+left: 117px;
+top: 120px;
+
+font-weight: 800;
+font-size: 56px;
+line-height: 60px;
+
+
+color: #FF7506;
+
+}
+
+.sothutuduoccap p{
+  position: absolute;
+width: 321px;
+height: 27px;
+left: 74px;
+top: 204px;
+font-weight: 400;
+font-size: 18px;
+line-height: 27px;
+
+color: #282739;
+}
+
+.sothutuduoccap a{
+  font-weight: 700;
+font-size: 18px;
+}
+
+.thoihan{
+  position: absolute;
+width: 469px;
+height: 110px;
+left: 0px;
+top: 275px;
+
+border-radius: 0px 0px 25px 25px;
+background: #FF9138;
+}
+
+.thoihan p{
+  position: relative;
+  top: 20px;
+  width: 320px;
+height: 33px;
+
+font-weight: 700;
+font-size: 22px;
+line-height: 2px;
+
+color: #FFFFFF;
+
+
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}

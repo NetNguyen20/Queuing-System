@@ -18,6 +18,7 @@ interface IUser {
       username:string,
       vaitro: string,
       tinhtrang:string
+
     }[]
   }
 const Quanlytaikhoan = () => {

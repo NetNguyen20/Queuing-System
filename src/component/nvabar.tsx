@@ -90,7 +90,7 @@ const Nvabar = () => {
                     </NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink className="list-link Cap-so" to="/capso">
+                    <NavLink className="list-link Cap-so" to="/Page-capso">
                         <img className="i-element" src={Capso} />
                         Cấp số
                     </NavLink>

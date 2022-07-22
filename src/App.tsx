@@ -2,7 +2,7 @@ import './App.css';
 import Login from "./component/Auth/login"
 
 import { Routes, BrowserRouter as Router, Route, BrowserRouter } from 'react-router-dom';
-import Dashboard from './component/Dashboard';
+import Dashboard from './component/Dashboard/Dashboard';
 import TrangChu from './component/Trangchu';
 import Thietbi from './component/Thietbi/Thietbi';
 import Register from './component/Auth/register';
@@ -18,7 +18,8 @@ import Chitietthietbi from './component/Thietbi/Detailthietbi';
 import Nhatkyhoatdong from './component/Auth/nhatky';
 import Vaitro from './component/Auth/vaitro';
 import Themvaitro from './component/Auth/themvaitro';
-
+import Capsomoi from './component/Capso/Capsomoi'
+import Capso from './component/Capso/Capso'
 
 function App() {
   
@@ -45,6 +46,8 @@ function App() {
           <Route path='/Page-nhatkyhoatdong' element={<Nhatkyhoatdong/>}/>
           <Route path='/Page-vaitro' element={<Vaitro/>}/>
           <Route path='/Page-themvaitro' element={<Themvaitro/>}/>
+          <Route path='/Page-capsomoi' element={<Capsomoi/>}/>
+          <Route path='/Page-capso' element={<Capso/>}/>
 
         </Routes>
 

@@ -1,17 +1,17 @@
-import Nvabar from "../component/nvabar";
-import icon1 from "../image/icon1.png"
-import icon2 from "../image/icon2.png"
-import icon3 from "../image/icon3.png"
-import icon4 from "../image/icon4.png"
-import ellipse1 from "../image/ellipse1.png"
-import ellipse2 from "../image/ellipse2.png"
-import ellipse3 from "../image/ellipse3.png"
+import Nvabar from "../nvabar";
+import icon1 from "../../image/icon1.png"
+import icon2 from "../../image/icon2.png"
+import icon3 from "../../image/icon3.png"
+import icon4 from "../../image/icon4.png"
+import ellipse1 from "../../image/ellipse1.png"
+import ellipse2 from "../../image/ellipse2.png"
+import ellipse3 from "../../image/ellipse3.png"
 
-import arrowup from "../image/arrowup.png"
-import arrowdown from "../image/arrowdown.png"
-import monitor1 from "../image/monitor1.png"
-import ask from "../image/ask.png"
-import data1 from "../image/data.png"
+import arrowup from "../../image/arrowup.png"
+import arrowdown from "../../image/arrowdown.png"
+import monitor1 from "../../image/monitor1.png"
+import ask from "../../image/ask.png"
+import data1 from "../../image/data.png"
 
 import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css';
@@ -20,10 +20,13 @@ import ApexCharts, { Props } from 'react-apexcharts';
 
 import { useState } from "react";
 
+import Select from 'react-select'
+import { NavLink } from "react-router-dom";
 
 
 const Dashboard = () => {
     const [value, onChange] = useState(new Date());
+    const [dashboard, setDashboar] = useState("");
 
     const options = {
         chart: {
@@ -54,6 +57,14 @@ const Dashboard = () => {
         }
 
     ];
+
+    const options1 = [
+        { value: 'Ngày', label: 'Ngày' },
+        { value: 'Tuần', label: 'Tuần' },
+        { value: 'Tháng', label: 'Tháng' }
+
+       
+    ]
 
     return (
         <div>
@@ -146,6 +157,12 @@ const Dashboard = () => {
             </div>
 
             <div className="chart">
+                <h1>Xem theo</h1>
+                <div className="dashboardoption">
+                    <Select  options={options1} onChange={(e) => setDashboar(e.value)}/>
+                </div>
+                <label>Bảng thống kê theo ngày</label>
+                <p>Tháng 7/2022</p>
                 <ApexCharts
                     type="area"
                     options={options}
@@ -153,6 +170,9 @@ const Dashboard = () => {
                     width={820}
                     height={380}
                 />
+
+                <h5>sl /</h5>
+                <h4>ngày</h4>
             </div>
 
 
