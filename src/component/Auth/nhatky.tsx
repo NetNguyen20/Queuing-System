@@ -3,7 +3,7 @@ import { TIMEOUT } from "dns";
 import { collection, getDocs, Timestamp } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import { db } from "../../firebase";
-import Nvabar from "../nvabar"
+import Nvabar from "../Nvabar/nvabar"
 import time from "../../image/time.png"
 import to from "../../image/to.png"
 

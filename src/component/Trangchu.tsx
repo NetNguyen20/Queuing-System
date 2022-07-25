@@ -1,7 +1,7 @@
 import { auth, db } from "../firebase";
 import React, { useContext, useEffect, useRef, useState } from "react";
 import anhdaidien from "../image/anhdaidien.png"
-import Nvabar from "../component/nvabar"
+import Nvabar from "./Nvabar/nvabar"
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
 import { query, collection, getDocs, where } from "firebase/firestore";

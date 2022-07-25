@@ -1,6 +1,6 @@
 import { async } from "@firebase/util";
 import React, { useEffect, useState } from "react";
-import Nvabar from "../nvabar"
+import Nvabar from "../Nvabar/nvabar"
 import Thietbiservice from "../../context/servicethietbi";
 import { Link, NavLink } from "react-router-dom";
 import { collection, doc, getDocs, updateDoc } from "firebase/firestore";
@@ -103,7 +103,7 @@ const Thietbi = () => {
                 <p>Từ khóa</p>
                 <input type="text" placeholder="Nhập từ khóa" onChange={(e) => setSearch(e.target.value)} />
             </div>
-            <table className="styled-table">
+            <table className="styled-table" > 
                 <thead>
                     <tr>
                         <th style={{width: "103px",height: "49px"}}> Mã thiết bị</th>
@@ -126,11 +126,11 @@ const Thietbi = () => {
                                 <td style={{width: "109px", height:"49px"}}>{thietbilist.tenthietbi}</td>
                                 <td style={{width: "138px",height: "49px"}}>{thietbilist.diachiip}</td>
                                 <td style={{width: "171px",height: "49px"}}>
-                                    <img src={Ketnoi} style={{width: "8px", height:"8px"}} />
+                                    <img src={Ketnoi} style={{width: "8px", height:"8px"}} />&nbsp;
                                     Hoạt động
                                 </td>
                                 <td style={{width: "145px",height: "49px"}}>
-                                    <img src={Ketnoi} style={{width: "8px", height:"8px"}} />
+                                    <img src={Ketnoi} style={{width: "8px", height:"8px"}} />&nbsp;
                                     Kết nối
                                 </td>
                                 <td style={{width: "268px",height: "49px"}}>{thietbilist.dichvu}</td>
@@ -141,7 +141,7 @@ const Thietbi = () => {
                                 </td>
                                 <td>
                                     <label htmlFor="id"></label>
-                                    <NavLink to={"/Page-capnhatthietbi"} style={{ textDecoration: "none"}}>
+                                    <NavLink to={"/Page-themthietbi"} style={{ textDecoration: "none"}}>
                                         Cập nhật
                                     </NavLink>
                                     

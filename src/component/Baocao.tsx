@@ -1,5 +1,5 @@
 import React from "react";
-import Nvabar from "../component/nvabar"
+import Nvabar from "./Nvabar/nvabar"
 
 const Baocao = () =>{
 

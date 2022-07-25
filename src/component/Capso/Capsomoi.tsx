@@ -1,5 +1,5 @@
 import React, { Component, useState } from "react";
-import Nvabar from "../nvabar";
+import Nvabar from "../Nvabar/nvabar";
 import to from "../../image/to.png"
 import Select from 'react-select'
 import { NavLink } from "react-router-dom";

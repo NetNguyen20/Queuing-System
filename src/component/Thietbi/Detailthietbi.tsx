@@ -1,5 +1,5 @@
 import React from "react";
-import Nvabar from "../nvabar"
+import Nvabar from "../Nvabar/nvabar"
 import to from "../../image/to.png"
 
 const Chitietthietbi = () => {

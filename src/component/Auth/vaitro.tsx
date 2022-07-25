@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import Nvabar from "../nvabar"
+import Nvabar from "../Nvabar/nvabar"
 import to from "../../image/to.png"
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../firebase";

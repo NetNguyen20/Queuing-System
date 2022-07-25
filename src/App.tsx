@@ -10,7 +10,6 @@ import Retpassword from './component/Auth/resetpassword';
 import Quanlytaikhoan from './component/Auth/Quanlytaikhoan';
 import Themnguoidung from './component/Auth/Themnguoidung';
 import Themthietbi from './component/Thietbi/Themthietbi';
-import Check from './component/filetest';
 import Editthietbi from './component/Thietbi/Editthietbi';
 import ConfirmPass from './component/Auth/confirmpass';
 import ForgotPas from './component/Auth/forgotpass';
@@ -20,7 +19,7 @@ import Vaitro from './component/Auth/vaitro';
 import Themvaitro from './component/Auth/themvaitro';
 import Capsomoi from './component/Capso/Capsomoi'
 import Capso from './component/Capso/Capso'
-
+import Chitietcapso from './component/Capso/Chitietcapso';
 function App() {
   
 
@@ -39,7 +38,6 @@ function App() {
           <Route path='/Page-nguoidung' element ={<Themnguoidung/>}/>
           <Route path='/Page-themthietbi' element ={<Themthietbi/>}/>
           <Route path='/Page-capnhatthietbi' element ={<Editthietbi/>}/>
-          <Route path='/Page-check' element={<Check/>}/>
           <Route path='/Page-confirm' element={<ConfirmPass/>}/>
           <Route path='/Page-forgot' element={<ForgotPas/>}/>
           <Route path='/Page-chitietthietbi' element={<Chitietthietbi/>}/>
@@ -48,6 +46,8 @@ function App() {
           <Route path='/Page-themvaitro' element={<Themvaitro/>}/>
           <Route path='/Page-capsomoi' element={<Capsomoi/>}/>
           <Route path='/Page-capso' element={<Capso/>}/>
+          <Route path='/Page-chitietcapso' element={<Chitietcapso/>}/>
+
 
         </Routes>
 

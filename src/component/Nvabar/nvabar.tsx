@@ -1,16 +1,16 @@
-import logo from "../image/logo.png"
-import Dashboard from "../image/Dashboard.png"
-import Thietbi from "../image/Thietbi.png"
-import Dichvu from "../image/Dichvu.png"
-import Capso from "../image/Capso.png"
-import Baocao from "../image/Baocao.png"
-import Caidat from "../image/Caidat.png"
-import Dangxuat from "../image/Dangxuat.png"
-import List from "../image/List.png"
-import User from "../image/User.png"
-import Bell from "../image/bell.png"
+import logo from "../../image/logo.png"
+import Dashboard from "../../image/Dashboard.png"
+import Thietbi from "../../image/Thietbi.png"
+import Dichvu from "../../image/Dichvu.png"
+import Capso from "../../image/Capso.png"
+import Baocao from "../../image/Baocao.png"
+import Caidat from "../../image/Caidat.png"
+import Dangxuat from "../../image/Dangxuat.png"
+import List from "../../image/List.png"
+import User from "../../image/User.png"
+import Bell from "../../image/bell.png"
 
-import { auth, db } from "../firebase";
+import { auth, db } from "../../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
 import { query, collection, getDocs, where } from "firebase/firestore";
@@ -19,6 +19,8 @@ import { query, collection, getDocs, where } from "firebase/firestore";
 import { NavLink, useResolvedPath } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { signOut } from "firebase/auth"
+
+import Popup from "../Capso/Popup";
 
 
 const Nvabar = () => {
@@ -53,10 +55,33 @@ const Nvabar = () => {
     const logout = () => {
         signOut(auth);
     };
+
+    const [isOpen, setIsOpen] = useState(false);
+
+    const togglePopup = () => {
+        setIsOpen(!isOpen);
+    }
+    var showdate = new Date()
+    var displaydate = showdate.getHours() + 'h' + showdate.getMinutes() + ' ngày ' + showdate.getDay() + '/' + (showdate.getMonth()+1) +  '/' + showdate.getFullYear() 
     return (<div>
         
         <div className="information">
-        <img src={Bell} style={{top: "10px", left:"1210px"}}/>
+        <img src={Bell} style={{top: "10px", left:"1210px"}} onClick={togglePopup}/>
+
+           <div className="notification">
+                {isOpen && <Popup 
+                    content={ 
+                        <div className="thongbao">                    
+                            <div className="thongbao1">
+                                <label>Thông báo</label>
+                            </div>
+                            <h5>Người dùng: {username}</h5>
+                            <p>Thời gian nhận số: {displaydate}</p>
+                        </div>
+                    }
+                    handleClose={togglePopup}
+                />}
+           </div>
 
             <NavLink to="/Page-home">
                 <img src={User} />

@@ -1,4 +1,4 @@
-import Nvabar from "../nvabar";
+import Nvabar from "../Nvabar/nvabar";
 import icon1 from "../../image/icon1.png"
 import icon2 from "../../image/icon2.png"
 import icon3 from "../../image/icon3.png"

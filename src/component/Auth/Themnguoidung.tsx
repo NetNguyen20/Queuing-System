@@ -4,7 +4,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { auth, db } from "../../firebase";
 import { addDoc, collection, serverTimestamp, Timestamp } from "firebase/firestore"
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import Nvabar from "../nvabar";
+import Nvabar from "../Nvabar/nvabar";
 import Select from 'react-select'
 import to from "../../image/to.png"
 

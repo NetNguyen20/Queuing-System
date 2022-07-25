@@ -1,4 +1,4 @@
-import Nvabar from "../../component/nvabar"
+import Nvabar from "../Nvabar/nvabar"
 import { useAuthState } from "react-firebase-hooks/auth";
 import { NavLink, useNavigate } from "react-router-dom";
 import { query, collection, getDocs, where } from "firebase/firestore";
@@ -107,11 +107,11 @@ const Quanlytaikhoan = () => {
                                     <td>{listtaikhoan.email}</td>
                                     <td>{listtaikhoan.vaitro}</td>
                                     <td>
-                                        <img src={Ketnoi} style={{width: "8px", height:"8px"}} />
+                                        <img src={Ketnoi} style={{width: "8px", height:"8px"}} /> &nbsp;
 
                                         {listtaikhoan.tinhtrang}
                                     </td>
-                                    <td><NavLink to={"/capnhat"}>Cập nhật</NavLink></td>
+                                    <td><NavLink to={"/Page-nguoidung"}>Cập nhật</NavLink></td>
                                 </tr>
                             );
                         }

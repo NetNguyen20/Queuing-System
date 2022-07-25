@@ -2,7 +2,7 @@ import { addDoc, collection } from "firebase/firestore";
 import React, { useState } from "react";
 import { db } from "../../firebase";
 import { NavLink } from "react-router-dom";
-import Nvabar from "../nvabar";
+import Nvabar from "../Nvabar/nvabar";
 import to from "../../image/to.png"
 
 const Themvaitro = () => {
