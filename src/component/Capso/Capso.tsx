@@ -81,14 +81,14 @@
                     <table className="styled-table">
                         <thead>
                             <tr>
-                                <th style={{ width: "93px", height: "49px" }}> STT</th>
+                                <th style={{ width: "93px", height: "49px", borderRadius: " 12px 0px 0px 0px " }}> STT</th>
                                 <th style={{ width: "162px", height: "49px" }}> Tên khách hàng</th>
                                 <th style={{ width: "171px", height: "49px" }}> Tên dịch vụ </th>
                                 <th style={{ width: "161px", height: "49px" }}> Thời gian cấp</th>
                                 <th style={{ width: "174px", height: "49px" }}> Hạn sử dụng</th>
                                 <th style={{ width: "147px", height: "49px" }}> Trạng thái</th>
                                 <th style={{ width: "120px", height: "49px" }}> Nguồn cấp </th>
-                                <th style={{ width: "78px", height: "49px" }}>  </th>
+                                <th style={{ width: "78px", height: "49px",borderRadius: " 0px 12px 0px 0px "}}>  </th>
 
                             </tr>
                         </thead>

@@ -11,7 +11,6 @@ import Ketnoi from "../../image/ketnoi.png"
 
 interface IUser {
     user:{
-      id:string,
       email:string,
       name:string,
       phone:number,
@@ -86,13 +85,13 @@ const Quanlytaikhoan = () => {
             <table className="styled-table">
                 <thead>
                     <tr>
-                        <th style={{ width: "150px", height: "49px" }}> Tên đăng nhập</th>
+                        <th style={{ width: "150px", height: "49px", borderRadius: "12px 0px 0px 0px" }}> Tên đăng nhập</th>
                         <th style={{ width: "166px", height: "49px" }}> Họ tên</th>
                         <th style={{ width: "130px", height: "49px" }}> Số điện thoại</th>
                         <th style={{ width: "255px", height: "49px" }}> Email</th>
                         <th style={{ width: "114px", height: "49px" }}> Vai trò</th>
                         <th style={{ width: "193px", height: "49px" }}> Trạng thái hoạt động</th>
-                        <th style={{ width: "99px", height: "49px" }}> </th>
+                        <th style={{ width: "99px", height: "49px", borderRadius: " 0px 12px 0px 0px" }}> </th>
 
                     </tr>
                 </thead>
@@ -111,7 +110,7 @@ const Quanlytaikhoan = () => {
 
                                         {listtaikhoan.tinhtrang}
                                     </td>
-                                    <td><NavLink to={"/Page-nguoidung"}>Cập nhật</NavLink></td>
+                                    <td><NavLink to={"/Page-capnhatnguoidung"}>Cập nhật</NavLink></td>
                                 </tr>
                             );
                         }

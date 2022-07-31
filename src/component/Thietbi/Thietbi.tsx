@@ -1,11 +1,8 @@
-import { async } from "@firebase/util";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Nvabar from "../Nvabar/nvabar"
-import Thietbiservice from "../../context/servicethietbi";
-import { Link, NavLink } from "react-router-dom";
-import { collection, doc, getDocs, updateDoc } from "firebase/firestore";
+import {  NavLink } from "react-router-dom";
+import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../firebase";
-import { quanlythietbiRef } from "../../context/firestorecollection";
 import Add from "../../image/Add.png"
 import Ketnoi from "../../image/ketnoi.png"
 import Select from 'react-select'
@@ -106,14 +103,14 @@ const Thietbi = () => {
             <table className="styled-table" > 
                 <thead>
                     <tr>
-                        <th style={{width: "103px",height: "49px"}}> Mã thiết bị</th>
+                        <th style={{width: "103px",height: "49px", borderRadius: "  12px 0px 0px 0px "}}> Mã thiết bị</th>
                         <th style={{width: "99px", height: "49px"}}> Tên thiết bị</th>
                         <th style={{width: "138px",height: "49px"}}> Địa chỉ IP</th>
                         <th style={{width: "171px",height: "49px"}}> Trạng thái hoạt động</th>
                         <th style={{width: "145px",height: "49px"}}> Trạng thái kết nối</th>
                         <th style={{width: "268px",height: "49px"}}> Dịch vụ sử dụng</th>
                         <th style={{width: "82px",height: "49px"}}>  </th>
-                        <th style={{width: "106px",height: "49px"}}>  </th>
+                        <th style={{width: "106px",height: "49px", borderRadius: " 0px 12px 0px 0px "}}>  </th>
 
                     </tr>
                 </thead>
@@ -141,11 +138,9 @@ const Thietbi = () => {
                                 </td>
                                 <td>
                                     <label htmlFor="id"></label>
-                                    <NavLink to={"/Page-themthietbi"} style={{ textDecoration: "none"}}>
+                                    <NavLink to={"/Page-capnhatthietbi"} style={{ textDecoration: "none"}}>
                                         Cập nhật
-                                    </NavLink>
-                                    
-                                    
+                                    </NavLink>                                    
                                 </td>
 
                             </tr>

@@ -60,10 +60,10 @@ const Vaitro = ()=>{
                 <table className="styled-table">
                     <thead>
                         <tr>
-                            <th style={{width: "224px",height: "49px"}}> Tên vai trò</th>
+                            <th style={{width: "224px",height: "49px" , borderRadius: "12px 0px 0px 0px"}}> Tên vai trò</th>
                             <th style={{width: "224px", height: "49px"}}> Số người dùng</th>
                             <th style={{width: "537px",height: "49px"}}> Mô tả</th>
-                            <th style={{width: "125px",height: "49px"}}>  </th>
+                            <th style={{width: "125px",height: "49px", borderRadius: "0px 12px 0px 0px"}}>  </th>
 
                         </tr>
                     </thead>
@@ -79,7 +79,7 @@ const Vaitro = ()=>{
                                     <td style={{width: "537px", height:"49px"}}>{listvaitro.mota}</td>     
                                     <td>
                                         <label></label>
-                                        <NavLink to={"/Page-themvaitro"} style={{width:"125px", height:"49px", textDecoration: "none"}}>
+                                        <NavLink to={"/Page-capnhatvaitro"} style={{width:"125px", height:"49px", textDecoration: "none"}}>
                                             Cập nhật
                                         </NavLink>
                                         

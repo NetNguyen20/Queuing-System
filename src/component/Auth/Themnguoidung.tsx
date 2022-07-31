@@ -96,7 +96,7 @@ const Themnguoidung = (props:any) => {
             </div>
             <div className="tendangnhapnd">
                 <p>Tên đăng nhập</p>
-                <input onChange={(e) => setName(e.target.value)} value={name} type="email" className="form-control" placeholder="Nhập tên đăng nhập"></input>
+                <input onChange={(e) => setName(e.target.value)} value={name} type="text" className="form-control" placeholder="Nhập tên đăng nhập"></input>
             </div>
             <div className="sodienthoaind">
                 <p>Số điện thoại</p>
@@ -112,7 +112,7 @@ const Themnguoidung = (props:any) => {
             </div>
             <div className="emailnd">
                 <p>Email</p>
-                <input onChange={(e) => setEmail(e.target.value)} value={email} type="text" className="form-control" placeholder="Nhập email"></input>
+                <input onChange={(e) => setEmail(e.target.value)} value={email} type="email" className="form-control" placeholder="Nhập email"></input>
             </div>
 
             <div className="vaitrond">

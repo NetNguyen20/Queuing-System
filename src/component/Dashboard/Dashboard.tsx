@@ -18,10 +18,12 @@ import 'react-calendar/dist/Calendar.css';
 import ApexCharts, { Props } from 'react-apexcharts';
 
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Select from 'react-select'
 import { NavLink } from "react-router-dom";
+import { collection } from "firebase/firestore";
+import { db } from "../../firebase";
 
 
 const Dashboard = () => {
@@ -66,11 +68,16 @@ const Dashboard = () => {
        
     ]
 
+    const [totalUsers, setTotalUsers] = useState(0);
+    const [newUsers, setNewUsers] = useState(0);
+
+ 
+
     return (
         <div>
             <Nvabar />
             <div className="tieude">
-                <p>Dashboard</p>
+                <p style={{color:"#FF7506"}}>Dashboard</p>
             </div>
             <div className="thongtin">
                 <h5 style={{ left: "210px", fontWeight: 700, fontSize: "24px" }}>Biểu đồ cấp số</h5>
@@ -78,7 +85,7 @@ const Dashboard = () => {
             <div className="sothutu">
                 <div className="sothutudacap">
                     <img src={icon1} />
-                    <p>Số thứ tự đa cấp</p>
+                    <p>Số thứ tự đã cấp</p>
                     <h2>4.221</h2>
                     <div className="sophantram1">
                         <img src={arrowup} />

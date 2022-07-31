@@ -19,8 +19,8 @@ import { query, collection, getDocs, where } from "firebase/firestore";
 import { NavLink, useResolvedPath } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { signOut } from "firebase/auth"
+import PopupBell from "./PopupBell"
 
-import Popup from "../Capso/Popup";
 
 
 const Nvabar = () => {
@@ -62,14 +62,14 @@ const Nvabar = () => {
         setIsOpen(!isOpen);
     }
     var showdate = new Date()
-    var displaydate = showdate.getHours() + 'h' + showdate.getMinutes() + ' ngày ' + showdate.getDay() + '/' + (showdate.getMonth()+1) +  '/' + showdate.getFullYear() 
+    var displaydate = showdate.getHours() + 'h' + showdate.getMinutes() + ' ngày ' + showdate.getDate() + '/' + (showdate.getMonth()+1) +  '/' + showdate.getFullYear() 
     return (<div>
         
         <div className="information">
         <img src={Bell} style={{top: "10px", left:"1210px"}} onClick={togglePopup}/>
 
            <div className="notification">
-                {isOpen && <Popup 
+                {isOpen && <PopupBell 
                     content={ 
                         <div className="thongbao">                    
                             <div className="thongbao1">
@@ -109,7 +109,7 @@ const Nvabar = () => {
                     </NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink className="list-link Dich-vu" to="/dichvu">
+                    <NavLink className="list-link Dich-vu" to="/Page-dichvu">
                         <img className="i-element" src={Dichvu} />
                         Dịch vụ
                     </NavLink>
@@ -121,7 +121,7 @@ const Nvabar = () => {
                     </NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink className="list-link Bao-cao" to="/baocao">
+                    <NavLink className="list-link Bao-cao" to="/Page-baocao">
                         <img className="i-element" src={Baocao} />
                         Báo cáo
                     </NavLink>

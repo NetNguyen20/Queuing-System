@@ -5,7 +5,7 @@ import { Routes, BrowserRouter as Router, Route, BrowserRouter } from 'react-rou
 import Dashboard from './component/Dashboard/Dashboard';
 import TrangChu from './component/Trangchu';
 import Thietbi from './component/Thietbi/Thietbi';
-import Register from './component/Auth/register';
+import Editnguoidung from './component/Auth/capnhatnguoidung';
 import Retpassword from './component/Auth/resetpassword';
 import Quanlytaikhoan from './component/Auth/Quanlytaikhoan';
 import Themnguoidung from './component/Auth/Themnguoidung';
@@ -20,6 +20,11 @@ import Themvaitro from './component/Auth/themvaitro';
 import Capsomoi from './component/Capso/Capsomoi'
 import Capso from './component/Capso/Capso'
 import Chitietcapso from './component/Capso/Chitietcapso';
+import Themdichvu from './component/Dichvu/Themdichvu';
+import Dichvu from './component/Dichvu/Dichvu';
+import Chitietdichvu from './component/Dichvu/Chitietdichvu';
+import Baocao from './component/Baocao';
+import Capnhatvaitro from './component/Auth/capnhatvaitro';
 function App() {
   
 
@@ -32,7 +37,7 @@ function App() {
           <Route path='/Page-home' element ={<TrangChu/>}/>
           <Route path='/Page-dashboard' element ={<Dashboard/>}/>
           <Route path='/Page-thietbi' element ={<Thietbi/>}/>
-          <Route path='/Page-register' element ={<Register/>}/>
+          <Route path='/Page-capnhatnguoidung' element ={<Editnguoidung/>}/>
           <Route path='/Page-reset' element ={<Retpassword/>}/>
           <Route path='/Page-quanly' element ={<Quanlytaikhoan/>}/>
           <Route path='/Page-nguoidung' element ={<Themnguoidung/>}/>
@@ -47,6 +52,12 @@ function App() {
           <Route path='/Page-capsomoi' element={<Capsomoi/>}/>
           <Route path='/Page-capso' element={<Capso/>}/>
           <Route path='/Page-chitietcapso' element={<Chitietcapso/>}/>
+          <Route path='/Page-themdichvu' element={<Themdichvu/>}/>
+          <Route path='/Page-dichvu' element={<Dichvu/>}/>
+          <Route path='/Page-chitietdichvu' element={<Chitietdichvu/>}/>
+          <Route path='/Page-baocao' element={<Baocao/>}/>
+          <Route path='/Page-capnhatvaitro' element={<Capnhatvaitro/>}/>
+
 
 
         </Routes>

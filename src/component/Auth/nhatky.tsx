@@ -22,7 +22,7 @@ const Nhatkyhoatdong = () => {
     const [date1, setDate1] = useState<any | null>(null)
 
     var showdate = new Date()
-    var displaydate = showdate.getHours() + '/' + (showdate.getMonth()+ 1) +  '/' + showdate.getFullYear() + '  ' + showdate.getHours() + ':' + showdate.getMinutes() + ':' + showdate.getSeconds()
+    var displaydate = showdate.getDate() + '/' + (showdate.getMonth()+ 1) +  '/' + showdate.getFullYear() + '  ' + showdate.getHours() + ':' + showdate.getMinutes() + ':' + showdate.getSeconds()
 
     useEffect(() => {
 
@@ -70,10 +70,10 @@ const Nhatkyhoatdong = () => {
             <table className="styled-table">
                 <thead>
                     <tr>
-                        <th style={{ width: "266px", height: "49px" }}> Tên đăng nhập</th>
+                        <th style={{ width: "266px", height: "49px", borderRadius: "12px 0px 0px 0px" }}> Tên đăng nhập</th>
                         <th style={{ width: "240px", height: "49px" }}> Thời gian tác động</th>
                         <th style={{ width: "216px", height: "49px" }}> IP thực hiện</th>
-                        <th style={{ width: "386px", height: "49px" }}> Thao tác thực hiện</th>
+                        <th style={{ width: "386px", height: "49px", borderRadius: " 0px 12px 0px 0px" }}> Thao tác thực hiện</th>
 
 
                     </tr>
