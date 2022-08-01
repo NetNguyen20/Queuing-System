@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { query, collection, getDocs, where } from "firebase/firestore";
 
 const TrangChu = () => {
-    const [user, loading, error] = useAuthState(auth);
+    const [user, loading] = useAuthState(auth);
     const [email, setEmail] = useState("");
     const [username, setUserName] = useState("");
     const [name, setName] = useState("");
@@ -33,6 +33,7 @@ const TrangChu = () => {
             alert("An error occured while fetching user data");
         }
     };
+
     useEffect(() => {
         if (loading) return;
         if (!user) return navigate("/Page-login");

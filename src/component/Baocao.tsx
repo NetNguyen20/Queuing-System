@@ -8,6 +8,8 @@
     import Add from "../image/Add.png"
     import time from "../image/time.png"
     import BoQua from "../image/boqua.png"
+    import Tai from "../image/Download.png"
+
     import { CSVLink, CSVDownload } from "react-csv";
 
     const Baocao = () => {
@@ -22,10 +24,12 @@
         var showdate = new Date()
         var displaydate = showdate.getDate() + '/' + (showdate.getMonth() + 1) + '/' + showdate.getFullYear() + '  ' + showdate.getHours() + ':' + showdate.getMinutes() + ':' + showdate.getSeconds()
         const csvData = [
-            ["firstname", "lastname", "email"],
-            ["Ahmed", "Tomi", "ah@smthing.co.com"],
-            ["Raed", "Labes", "rl@smthing.co.com"],
-            ["Yezzi", "Min l3b", "ymin@cocococo.com"]
+            ["Số thứ tự", "Tên dịch vụ", "Thời gian cấp", "Tình trạng", "Nguồn cấp"],
+            ["2010001", "Khám tim mạch", "1/8/2022 9:7:12", "Đang chờ", "Kiosk"],
+            ["2010002", "Khám sản - phụ khoa", "1/8/2022 9:7:12", "Đã sử dụng", "Kiosk"],
+            ["2010003", "Răng hàm mặt", "1/8/2022 9:7:12", "Đang chờ", "Kiosk"],
+            ["2010004", "Khám tổng quát", "1/8/2022 9:7:12", "Bỏ qua", "Kiosk"]
+
           ];
         return (
             <div>
@@ -119,7 +123,7 @@
                                 <td style={{ width: "268px", height: "49px" }}>Kiosk</td>
                             </tr>
                             <tr>
-                                <td style={{ width: "103px", height: "49px" }}>2010001</td>
+                                <td style={{ width: "103px", height: "49px" }}>2010002</td>
                                 <td style={{ width: "109px", height: "49px" }}>Khám sản - phụ khoa</td>
                                 <td style={{ width: "138px", height: "49px" }}>{displaydate}</td>
                                 <td style={{ width: "171px", height: "49px" }}>
@@ -129,7 +133,7 @@
                                 <td style={{ width: "268px", height: "49px" }}>Kiosk</td>
                             </tr>
                             <tr>
-                                <td style={{ width: "103px", height: "49px" }}>2010001</td>
+                                <td style={{ width: "103px", height: "49px" }}>2010003</td>
                                 <td style={{ width: "109px", height: "49px" }}>Răng hàm mặt</td>
                                 <td style={{ width: "138px", height: "49px" }}>{displaydate}</td>
                                 <td style={{ width: "171px", height: "49px" }}>
@@ -139,7 +143,7 @@
                                 <td style={{ width: "268px", height: "49px" }}>Kiosk</td>
                             </tr>
                             <tr>
-                                <td style={{ width: "103px", height: "49px" }}>2010001</td>
+                                <td style={{ width: "103px", height: "49px" }}>2010004</td>
                                 <td style={{ width: "109px", height: "49px" }}>Khám tổng quát</td>
                                 <td style={{ width: "138px", height: "49px" }}>{displaydate}</td>
                                 <td style={{ width: "171px", height: "49px" }}>
@@ -157,8 +161,10 @@
 
                     </tbody>
                 </table>
-                
-                <CSVLink className="themtaikhoan" style={{ position:"absolute", top:"250px", left:"1380px", width: "85px", textDecoration: 'none', color: "#FF7506" }} data={csvData}>Download me</CSVLink>;
+                <CSVLink className="themtaikhoan" style={{ position:"absolute", top:"250px", left:"1380px", width: "75px", textDecoration: 'none', color: "#FF7506" }} data={csvData}>
+                    <img src={Tai} alt="" />
+                    Tải về
+                </CSVLink>;
 
             </div>
         )

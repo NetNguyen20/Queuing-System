@@ -1,28 +1,31 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Nvabar from "../Nvabar/nvabar";
 import to from "../../image/to.png"
-import { NavLink } from "react-router-dom";
-import { addDoc, collection } from "firebase/firestore";
+import { NavLink, useNavigate } from "react-router-dom";
+import { doc, updateDoc } from "firebase/firestore";
 import { db } from "../../firebase";
 
-const Themdichvu = () => {
+const Capnhatdichvu = () => {
     const [madichvu, setmadichvu] = useState("");
     const [tendichvu, settendichvu] = useState("");
     const [mota, setmota] = useState("");
+    const navigate = useNavigate();
+
 
     function handleSubmit(e) {
         e.preventDefault()
         if (madichvu === "" || tendichvu === "" || mota === "") {
             return
         }
-        const themvaitroRef = collection(db, 'dichvu')
-        addDoc(themvaitroRef, { madichvu, tendichvu, mota }).then(response => {
-            console.log(response.id)
-        }).catch(error => {
-            console.log(error.message)
-        })
+        const docRef = doc(db, 'dichvu', "ACHNfFIQ3BROctMj2VsM")
+        updateDoc(docRef, {madichvu, tendichvu, mota}).then(response=>{
+            console.log(response)
+
+        }).catch(error=>console.log(error.message))
+
 
     }
+
 
     return (
         <div>
@@ -78,7 +81,7 @@ const Themdichvu = () => {
 
                     </div>
                     <button style={{ left: "850px", color: "#ffffff" }} className="themthietbi" type="submit">
-                        Thêm dịch vụ
+                        Cập nhật
                     </button>
                     <NavLink className="huythietbi" to={"/Page-dichvu"}>
                         Hủy bỏ
@@ -94,4 +97,4 @@ const Themdichvu = () => {
     )
 }
 
-export default Themdichvu
+export default Capnhatdichvu

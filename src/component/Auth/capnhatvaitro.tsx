@@ -21,7 +21,7 @@ const Capnhatvaitro = () => {
         if (vaitro === "" || mota === "") {
             return
         }
-        const docRef = doc(db, 'vaitro', "92pB9XLlIq8MDiEOCIJH")
+        const docRef = doc(db, 'vaitro', "4KJr4MTk2ToGpkb8nyDg")
         updateDoc(docRef, {vaitro, mota}).then(response=>{
             console.log(response)
 

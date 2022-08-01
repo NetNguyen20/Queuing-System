@@ -1,4 +1,4 @@
-    import React, { useState } from "react";
+    import React, { useEffect, useState } from "react";
     import Nvabar from "../Nvabar/nvabar"
     import Ketnoi from "../../image/ketnoi.png"
     import to from "../../image/to.png"
@@ -6,12 +6,25 @@
     import { NavLink } from "react-router-dom";
     import time from "../../image/time.png"
     import Select from 'react-select'
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../firebase";
 
+
+interface IDichvu {
+    dichvu:{
+      madichvu:string,
+      tendichvu:string,
+      mota:string
+      
+    }[]
+  }
     const Dichvu = () => {
         const [date, setDate] = useState<any | null>(null)
         const [date1, setDate1] = useState<any | null>(null)
+        const dichvuCollectionRef = collection(db, "dichvu");
+        const [dichvu, setDichvu] = useState<IDichvu["dichvu"]>([]);
+        const [filteredContacts, setFilteredContacts] = useState([]);
         const [search, setSearch] = useState("")
-
         var showdate = new Date()
         var displaydate = showdate.getHours() + '/' + (showdate.getMonth()+ 1) +  '/' + showdate.getFullYear() + '  ' + showdate.getHours() + ':' + showdate.getMinutes() + ':' + showdate.getSeconds()
         const options1 = [
@@ -19,6 +32,30 @@
             { value: 'Hoạt động', label: 'Hoạt động' },
             { value: 'Ngừng hoạt động', label: 'Ngừng hoạt động' }
         ]
+
+        useEffect( () => {
+
+            const getDichvu = async () => {
+                const data = await getDocs(dichvuCollectionRef)
+                console.log(data.docs);
+                setDichvu(data.docs.map((doc: any) => ({...doc.data(), id: doc.id})))
+            };
+    
+            getDichvu();
+    
+        }, []);
+    
+
+        useEffect(() => {
+            setFilteredContacts(
+                dichvu.filter(
+                    (user) =>
+                        user.madichvu.toString().includes(search.toString()) ||
+                        user.tendichvu.toString().includes(search.toString()) ||
+                        user.mota.toString().includes(search.toString())
+                )
+            );
+        }, [search, dichvu]);
         return (
             <div>
                 <Nvabar />
@@ -60,109 +97,39 @@
                             </tr>
                         </thead>
                         <tbody>
+                            {
+                                filteredContacts.map((listdichvu) => {
+                                    return(
 
-                            <tr>
-                                <td style={{ width: "150px", height: "49px" }}>KIO_01</td>
-                                <td style={{ width: "224px", height: "49px" }}>Kiosk</td>
-                                <td style={{ width: "230px", height: "49px" }}>Mô tả dịch vụ 1</td>
-                                <td style={{ width: "253px", height: "49px" }}>
-                                    <img src={Ketnoi} style={{ width: "8px", height: "8px" }} />&nbsp;
-                                    Hoạt động
-                                </td>
+                                    <tr>
+                                    <td style={{ width: "150px", height: "49px" }}>KIO_01</td>
+                                    <td style={{ width: "224px", height: "49px" }}>Kiosk</td>
+                                    <td style={{ width: "230px", height: "49px" }}>{listdichvu.mota}</td>
+                                    <td style={{ width: "253px", height: "49px" }}>
+                                        <img src={Ketnoi} style={{ width: "8px", height: "8px" }} />&nbsp;
+                                        Hoạt động
+                                    </td>
 
-                                <td>
-                                    <label htmlFor="id"></label>
-                                    <NavLink to={"/Page-chitietdichvu"} style={{ textDecoration: "none" }}>
-                                        Chi tiết
-                                    </NavLink>
-
-
-                                </td>
-                                <td>
-                                    <label htmlFor="id"></label>
-                                    <NavLink to={"/Page-themdichvu"} style={{ textDecoration: "none" }}>
-                                        Cập nhật
-                                    </NavLink>
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td style={{ width: "150px", height: "49px" }}>KIO_01</td>
-                                <td style={{ width: "224px", height: "49px" }}>Kiosk</td>
-                                <td style={{ width: "230px", height: "49px" }}>Hoạt động </td>
-                                <td style={{ width: "253px", height: "49px" }}>
-                                    <img src={Ketnoi} style={{ width: "8px", height: "8px" }} />&nbsp;
-                                    Hoạt động
-                                </td>
-
-                                <td>
-                                    <label htmlFor="id"></label>
-                                    <NavLink to={"/Page-chitietdichvu"} style={{ textDecoration: "none" }}>
-                                        Chi tiết
-                                    </NavLink>
+                                    <td>
+                                        <label htmlFor="id"></label>
+                                        <NavLink to={"/Page-chitietdichvu"} style={{ textDecoration: "none" }}>
+                                            Chi tiết
+                                        </NavLink>
 
 
-                                </td>
-                                <td>
-                                    <label htmlFor="id"></label>
-                                    <NavLink to={"/Page-themdichvu"} style={{ textDecoration: "none" }}>
-                                        Cập nhật
-                                    </NavLink>
-                                </td>
+                                    </td>
+                                    <td>
+                                        <label htmlFor="id"></label>
+                                        <NavLink to={"/Page-capnhatdichvu"} style={{ textDecoration: "none" }}>
+                                            Cập nhật
+                                        </NavLink>
+                                    </td>
 
-
-                            </tr>
-                            <tr>
-                            <td style={{ width: "150px", height: "49px" }}>KIO_01</td>
-                                <td style={{ width: "224px", height: "49px" }}>Kiosk</td>
-                                <td style={{ width: "230px", height: "49px" }}>Hoạt động </td>
-                                <td style={{ width: "253px", height: "49px" }}>
-                                    <img src={Ketnoi} style={{ width: "8px", height: "8px" }} />&nbsp;
-                                    Hoạt động
-                                </td>
-
-                                <td>
-                                    <label htmlFor="id"></label>
-                                    <NavLink to={"/Page-chitietdichvu"} style={{ textDecoration: "none" }}>
-                                        Chi tiết
-                                    </NavLink>
-
-
-                                </td>
-                                <td>
-                                    <label htmlFor="id"></label>
-                                    <NavLink to={"/Page-themdichvu"} style={{ textDecoration: "none" }}>
-                                        Cập nhật
-                                    </NavLink>
-                                </td>
-                            </tr>
-                            <tr>
-                            <td style={{ width: "150px", height: "49px" }}>KIO_01</td>
-                                <td style={{ width: "224px", height: "49px" }}>Kiosk</td>
-                                <td style={{ width: "230px", height: "49px" }}>Hoạt động </td>
-                                <td style={{ width: "253px", height: "49px" }}>
-                                    <img src={Ketnoi} style={{ width: "8px", height: "8px" }} />&nbsp;
-                                    Hoạt động
-                                </td>
-
-                                <td>
-                                    <label htmlFor="id"></label>
-                                    <NavLink to={"/Page-chitietdichvu"} style={{ textDecoration: "none" }}>
-                                        Chi tiết
-                                    </NavLink>
-
-
-                                </td>
-                                <td>
-                                    <label htmlFor="id"></label>
-                                    <NavLink to={"/Page-themdichvu"} style={{ textDecoration: "none" }}>
-                                        Cập nhật
-                                    </NavLink>
-                                </td>
-
-                            </tr>
-
-
+                                </tr>
+                                );
+                            }
+                            )
+                        }
 
                         </tbody>
                     </table>

@@ -36,7 +36,7 @@ const Editnguoidung = () => {
         if (username === "" || email === "" || vaitro === "" || password === "" || name === "" || tinhtrang === "" || phone === "") {
             return
         }
-        const docRef = doc(db, 'users', "788YbpSCfnmWymsiRwKa")
+        const docRef = doc(db, 'users', "2reX4wN03Tv2HODAr7XB")
         updateDoc(docRef, {username, email, vaitro, password, name, tinhtrang, phone }).then(response=>{
             console.log(response)
 
@@ -91,16 +91,16 @@ const Editnguoidung = () => {
                 </div>
 
                 <div className="">
-                    <input id="id" onChange={(e) => setId(e.target.value)} value={"788YbpSCfnmWymsiRwKa"} type="hidden" className="form-control" placeholder="Nhập dich vu"></input>
+                    <input id="id" onChange={(e) => setId(e.target.value)} value={"2reX4wN03Tv2HODAr7XB"} type="hidden" className="form-control" placeholder="Nhập dich vu"></input>
                 </div>
 
             </div>
             <div className="nutchon">
                 
                 <button className="huybo">
-                    {/* <NavLink to="/Page-nguoidung"></NavLink> */}
                     <NavLink style={{textDecoration:'none'}} to="/Page-quanly"><p>Hủy bỏ</p></NavLink>
                 </button>
+                
                 <button type="submit" className="them">
                        <p style={{width: "150px"}}>Cập nhật người dùng</p> 
                 </button>

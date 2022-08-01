@@ -25,6 +25,7 @@ import Dichvu from './component/Dichvu/Dichvu';
 import Chitietdichvu from './component/Dichvu/Chitietdichvu';
 import Baocao from './component/Baocao';
 import Capnhatvaitro from './component/Auth/capnhatvaitro';
+import Capnhatdichvu from './component/Dichvu/capnhatdichvu';
 function App() {
   
 
@@ -57,6 +58,8 @@ function App() {
           <Route path='/Page-chitietdichvu' element={<Chitietdichvu/>}/>
           <Route path='/Page-baocao' element={<Baocao/>}/>
           <Route path='/Page-capnhatvaitro' element={<Capnhatvaitro/>}/>
+          <Route path='/Page-themdichvu' element={<Themdichvu/>}/>
+          <Route path='/Page-capnhatdichvu' element={<Capnhatdichvu/>}/>
 
 
 

@@ -1,8 +1,7 @@
 import {  doc, updateDoc } from "firebase/firestore";
-import React, { useEffect, useState } from "react";
-import { useAuthState } from "react-firebase-hooks/auth";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { auth, db } from "../../firebase";
+import { db } from "../../firebase";
 import Select from 'react-select'
 import MultiSelect from  'react-multiple-select-dropdown-lite'
 import { NavLink } from "react-router-dom";
@@ -34,8 +33,6 @@ const Editthietbi = () => {
         { value: 'Khám tổng quát', label: 'Khám tổng quát' }
 
     ]
-   const navigate = useNavigate();
-    const [user, loading, error] = useAuthState(auth);       
 
     const  handleOnchange  =  val  => {setDichvu(val)}
 
@@ -44,7 +41,7 @@ const Editthietbi = () => {
         if (mathietbi === "" || loaithietbi === "" || tenthietbi === "" || tendangnhap === "" || diachiip === "" || matkhau === "" || dichvu === "") {
             return
         }
-        const docRef = doc(db, 'thietbi', "RKKGl3ZXhTEOnADMtFfG")
+        const docRef = doc(db, 'thietbi', "7AsZSxyz3WmAi0P5Vgnt")
         updateDoc(docRef, {mathietbi, loaithietbi, tenthietbi, tendangnhap, diachiip, matkhau, dichvu }).then(response=>{
             console.log(response)
 
@@ -52,10 +49,6 @@ const Editthietbi = () => {
 
 
     }
-useEffect(() => {
-        if (loading) return;
-        if (user) navigate('', { replace: true });
-    }, [user, loading])
 
     return (
         <div>
@@ -110,12 +103,12 @@ useEffect(() => {
                         <MultiSelect style={{width:"1100px"}}  onChange={handleOnchange} options={options2} placeholder="Chọn loại dịch vụ" />
                     </div>
                    <div className="">
-                        <input id="id" onChange={(e) => setId(e.target.value)} value={"RKKGl3ZXhTEOnADMtFfG"} type="hidden" className="form-control" placeholder="Nhập dich vu"></input>
+                        <input id="id" onChange={(e) => setId(e.target.value)} value={"7AsZSxyz3WmAi0P5Vgnt"} type="hidden" className="form-control" placeholder="Nhập dich vu"></input>
                     </div>
                     
                 </div>
                 <button className="themthietbi" type="submit">
-                        <p>Cập nhật</p>
+                        <p>Cập nhật</p> 
                 </button>
                 <NavLink className="huythietbi" to={"/Page-thietbi"}>
                         Hủy bỏ
